@@ -4,6 +4,7 @@ set -e
 echo "Installing unattended-upgrades..."
 apt update
 apt install -y unattended-upgrades
+dpkg-reconfigure -f noninteractive unattended-upgrades
 
 FILE="/etc/apt/apt.conf.d/50unattended-upgrades"
 
